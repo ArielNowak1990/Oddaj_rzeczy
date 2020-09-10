@@ -1,0 +1,17 @@
+@import "./reset/reset";
+@import "./settings/colors";
+@import "./settings/fonts";
+@import "./settings/mixins";
+
+
+@import "./landingPage/header";
+@import "./landingPage/homeThreeColumns";
+@import "./landingPage/homeFourColumns";
+@import "./landingPage/aboutUs";
+@import "./landingPage/weHelp";
+
+
+
+body{
+  font-family: $font-base;
+}
