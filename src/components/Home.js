@@ -4,6 +4,7 @@ import HomeThreeColumns from "./HomeThreeColumns";
 import HomeFourColumns from "./HomeFourColumns";
 import AboutUs from "./AboutUs";
 import WeHelp from "./WeHelp";
+import Contact from "./Contact";
 
 function Home() {
     return (
@@ -13,7 +14,7 @@ function Home() {
             <HomeFourColumns/>
             <AboutUs/>
             <WeHelp/>
-            {/*<Contact/>*/}
+            <Contact/>
             {/*<Footer/>*/}
         </div>
     );

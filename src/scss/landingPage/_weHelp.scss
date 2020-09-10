@@ -84,3 +84,23 @@
     display: none;
   }
 }
+
+.pagination__list{
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  margin-top: 25px;
+  li{
+    margin-left: 15px;
+    margin-right: 15px;
+    .active{
+      color: red;
+      padding: 5px;
+      border: 1px solid black;
+    }
+  }
+
+}

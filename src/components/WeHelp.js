@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import decoration from '../assets/Decoration.svg'
+import Pagination from "./Pagination";
 
 export const API_URL = 'http://localhost:3000';
 
@@ -50,6 +51,36 @@ function WeHelp() {
     },[])
     //AXIOS.ALL
 
+    //PAGINATION
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(3);
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentFoundationsPosts = foundations.slice(indexOfFirstPost, indexOfLastPost);
+    const numberOfPages =foundations.length/postsPerPage
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
+    const [currentPageL, setCurrentPageL]= useState(1);
+    const [postsPerPageL]= useState(3);
+    const indexOfLastPostL = currentPageL * postsPerPageL;
+    const indexOfFirstPostL = indexOfLastPostL - postsPerPageL;
+    const currentLocalsPostsL = locals.slice(indexOfFirstPostL, indexOfLastPostL);
+    const numberOfPagesL =locals.length/postsPerPageL
+    const paginateL = (pageNumber)=> setCurrentPageL(pageNumber);
+
+
+    const [currentPageO, setCurrentPageO]= useState(1);
+    const [postsPerPageO]= useState(3);
+    const indexOfLastPostO = currentPageO * postsPerPageO;
+    const indexOfFirstPostO = indexOfLastPostO - postsPerPageO;
+    const currentOrganizationPostsO = organizations.slice(indexOfFirstPostO, indexOfLastPostO);
+    const numberOfPagesO =organizations.length/postsPerPageO
+    const paginateO = (pageNumber)=> setCurrentPageO(pageNumber);
+
+    //PAGINATION
+
     const handleFoundationVisible = () => {
         return (
                 setFoundationsVisible(true),
@@ -91,7 +122,7 @@ if (!locals){return ("....wczytywanie")}
                         współpracujemy. Możesz sprawdzić czym
                         się zajmują, komu pomagają i czego potrzebują.</h3>
                     <ul className={'help__list'}>
-                        {foundations.map((el, i) => {
+                        {currentFoundationsPosts.map((el, i) => {
                             return (
                                 <div className={'help__box'} key={i}>
                                     <div className={'help__info'}>
@@ -104,12 +135,17 @@ if (!locals){return ("....wczytywanie")}
                         })
                         }
                     </ul>
+                    <Pagination postPerPage={postsPerPage}
+                                totalPosts={foundations.length}
+                                paginate={paginate}
+                                currentPage={currentPage}
+                                numberOfPages={numberOfPages}/>
                 </div>
                 <div className={isOrganizationsVisible ? 'help__receiver' : 'help__receiver hidden'}>
                     <h3 className={'help__subtitle'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</h3>
                     <ul className={'help__list'}>
-                        {organizations.map((el, i) => {
+                        {currentOrganizationPostsO.map((el, i) => {
                             return (
                                 <div className={'help__box'} key={i}>
                                     <div className={'help__info'}>
@@ -122,12 +158,17 @@ if (!locals){return ("....wczytywanie")}
                         })
                         }
                     </ul>
+                    <Pagination postPerPage={postsPerPageO}
+                                totalPosts={organizations.length}
+                                paginate={paginateO}
+                                currentPage={currentPageO}
+                                numberOfPages={numberOfPagesO}/>
                 </div>
                 <div className={isLocalsVisible ? 'help__receiver' : 'help__receiver hidden'}>
                     <h3 className={'help__subtitle'}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</h3>
                     <ul className={'help__list'}>
-                        {locals.map((el, i) => {
+                        {currentLocalsPostsL.map((el, i) => {
                             return (
                                 <div className={'help__box'} key={i}>
                                     <div className={'help__info'}>
@@ -140,6 +181,11 @@ if (!locals){return ("....wczytywanie")}
                         })
                         }
                     </ul>
+                    <Pagination postPerPage={postsPerPageL}
+                                totalPosts={locals.length}
+                                paginate={paginateL}
+                                currentPage={currentPageL}
+                                numberOfPages={numberOfPagesL}/>
                 </div>
 
             </div>
