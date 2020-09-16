@@ -2,10 +2,9 @@ import app from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 import React from "react";
+import {configuration} from "../../pass";
 
-const config = {
-
-};
+const config = configuration;
 
 
 class Firebase {
