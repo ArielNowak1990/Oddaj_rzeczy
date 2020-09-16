@@ -1,0 +1,71 @@
+
+.LogSign_all,
+.LogSign_all2
+{
+  height: calc( 100vh - 151px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-75px);
+
+  h3{
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+
+  button{
+    margin-top: 45px;
+    margin-right: 45px;
+    margin-left: 45px;
+    padding: 10px;
+    background-color: white;
+    min-width: 150px;
+  }
+
+  input{
+    width: 60%;
+    margin-left: 20%;
+    border: 0px solid black;
+    border-bottom: 1px solid black;
+    height: 2.2em;
+    margin-top: 15px;
+    font-size: 1.4em;
+  }
+}
+.LogSign{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.LogSign_sec{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LogSign_buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button{
+    min-width: 100px;
+  }
+}
+
+.nonactive{
+ border: 0px solid black;
+}
+
+h4{
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 30px;
+}

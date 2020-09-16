@@ -5,13 +5,13 @@
 
 
 @import "./landingPage/header";
+@import "./landingPage/header_other";
 @import "./landingPage/homeThreeColumns";
 @import "./landingPage/homeFourColumns";
 @import "./landingPage/aboutUs";
 @import "./landingPage/weHelp";
 @import "./landingPage/contact";
-
-
+@import "./landingPage/logSign";
 
 body{
   font-family: $font-base;
