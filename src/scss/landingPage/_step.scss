@@ -1,0 +1,178 @@
+.yellow{
+  background-color: #ffb700;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+
+  h5{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 40px;
+    z-index: 1;
+  }
+  p{
+    margin-left: 40px;
+    margin-top: 10px;
+    z-index: 1;
+  }
+}
+
+.formularz{
+  margin-top: 50px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-direction: column;
+  padding-left: 40px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(182, 180, 180, 0.38);
+  min-height: 500px;
+
+  input, label, select,{
+    z-index: 1;
+  }
+
+  .bearBackground{
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+    height: 80%;
+  }
+
+  h4{
+    position: relative;
+    font-size: 1.2em;
+    z-index: 1;
+  }
+
+  h3{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  h5{
+    font-size: 1.5em;
+    margin-top: 20px;
+    z-index: 1;
+  }
+
+  form{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    label{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  button{
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.adresss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  min-width: 550px;
+
+  .adresss_your{
+    display: flex;
+    min-width: 320px;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    right: 0;
+    h5{
+      margin-bottom: 20px;
+    }
+    label {
+      margin-top: 5px;
+      input {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .adresss_info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    min-width: 320px;
+    h5{
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin-top: 5px;
+      input {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.formularz{
+  .sum_first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    label{
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+  }
+  .sum_sec{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 300px;
+    label{
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+  }
+  .sum_third{
+    z-index: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    label{
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+  }
+}
+.sum_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,6 +5,7 @@
 
 
 @import "./landingPage/header";
+@import "./landingPage/headers";
 @import "./landingPage/header_other";
 @import "./landingPage/homeThreeColumns";
 @import "./landingPage/homeFourColumns";
@@ -12,6 +13,7 @@
 @import "./landingPage/weHelp";
 @import "./landingPage/contact";
 @import "./landingPage/logSign";
+@import "./landingPage/step";
 
 body{
   font-family: $font-base;

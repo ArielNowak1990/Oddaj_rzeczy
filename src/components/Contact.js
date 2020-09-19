@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import decoration from '../assets/Decoration.svg';
 
 const API_URL = "https://fer-api.coderslab.pl/v1/portfolio/contact"
@@ -32,8 +32,8 @@ function Contact() {
 
         event.preventDefault();
         let arrayErrors = [];
-        let arrayError1 = [];
-        let arrayError2 = [];
+        // let arrayError1 = [];
+        // let arrayError2 = [];
         let contact = {
             name: name,
             email: email,

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import {Link} from "react-router-dom";
 import decoration from '../assets/Decoration.svg';
 import HomeHead from "./HomeHead";
@@ -41,6 +41,10 @@ function PageLog() {
                 setEmail(""),
                 setPassword(""),
                 console.log("dziala")
+
+            )
+            .then(
+                window.location.href="http://localhost:3001/steps"
             )
             .catch(error => {
                 console.log(error)
