@@ -144,9 +144,9 @@
   .sum_first {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     z-index: 1;
+
 
     label {
       margin-top: 10px;
@@ -157,14 +157,15 @@
   .sum_sec {
     z-index: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     min-width: 300px;
-
+    padding-left: 20px;
     label {
       margin-top: 10px;
       font-size: 1.5em;
+    }
+    h5{
+      margin-bottom: 10px;
     }
   }
 
@@ -172,22 +173,18 @@
     z-index: 1;
     min-width: 300px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 
     label {
       margin-top: 10px;
-      font-size: 1.2em;
+      font-size: 1.5em;
+    }
+    h5{
+      margin-bottom: 10px;
     }
   }
 }
 
-.sum_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .step1_form {
   input {
@@ -232,16 +229,62 @@
   margin-top: 15px;
 }
 
+.place_select{
+  font-size: 1.25em;
+}
+
 .instytucja {
   margin-top: 15px;
 }
 
 .person_help {
-  input:hover {
-    background-color: #ffb700;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  font-size: 1.2em;
+
+  input {
+    display: none;
   }
 
-  input:active {
-    background-color: #ffb700;
+  .check_button {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 5px 10px;
+    padding: 5px;
   }
+
+  input:checked + .check_button {
+    background-color: #ffb700;
+    border: 1px solid black;
+  }
+}
+
+.step5_img{
+  height: 30px;
+}
+
+.sum_first{
+  padding: 20px;
+
+  h5{
+    display: flex;
+  }
+
+  img{
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  div{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sum_container{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
