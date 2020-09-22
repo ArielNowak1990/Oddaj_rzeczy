@@ -1,7 +1,8 @@
 import React, {useContext} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
-
+import log1 from "../assets/Icon-1.svg"
+import log4 from "../assets/Icon-4.svg"
 
 function Step5({next, prev}) {
     let {dane} = useContext(StepContext);
@@ -31,8 +32,8 @@ function Step5({next, prev}) {
                     <div className={"sum_first"}>
                         <h4> Podsumowanie Twojej darowizny:</h4>
                         <h5> Oddajesz:</h5>
-                        <h5><i className="fas fa-tshirt"/> {dane.howMany},{dane.material}, {dane.to}</h5>
-                        <h5><i className="fas fa-redo-alt"/> dla lokalizacji {dane.from}:</h5>
+                        <h5><img src={log1} alt=""/> {dane.howMany},{dane.material}, {dane.to}</h5>
+                        <h5><img src={log4} alt=""/> dla lokalizacji {dane.from}:</h5>
                     </div>
                     <div className={"sum_container"}>
                         <div className={"sum_sec"}>

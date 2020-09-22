@@ -53,7 +53,7 @@ function Step3({next,prev}) {
                 <img src={bearBackground} alt="bearBackground" className={"bearBackground"}/>
             <h4> Krok 3/4 </h4>
             <h5> Lokalizacja, odbiór z:</h5>
-            <label htmlFor="place"></label>
+            <label htmlFor="place" className={"place"}/>
             <select id="place" name="place" onChange={handleChangeFrom}>
                 <option value="Kraków">Kraków</option>
                 <option value="Warszawa">Warszawa</option>
@@ -63,29 +63,30 @@ function Step3({next,prev}) {
             </select>
 
             <h5> Komu chciałbyś pomóc:</h5>
+                <div className={"person_help"}>
             <label>
-                <input type="radio" id={"dzieciom"} name={"komu"}
-                       value={"dzieciom"} onChange={handleChangeToWhere}/>dzieciom
+                <input type="button" id={"dzieciom"} name={"komu"}
+                        value={"dzieciom"} onChange={handleChangeToWhere}/>
             </label>
             <label>
-                <input type="radio" id={"samotnym_matkom"} name={"komu"}
-                       value={"samotnym_matkom"} onChange={handleChangeToWhere}/>samotnym matkom
+                <input type="button" id={"samotnym_matkom"} name={"komu"}
+                       value={"samotnym_matkom"} onChange={handleChangeToWhere}/>
             </label>
             <label>
-                <input type="radio" id={"bezdomnym"} name={"komu"}
-                       value={"bezdomnym"} onChange={handleChangeToWhere}/>bezdomnym
+                <input type="button" id={"bezdomnym"} name={"komu"}
+                       value={"bezdomnym"} onChange={handleChangeToWhere}/>
             </label>
             <label>
-                <input type="radio" id={"niepełnosprawnym"} name={"komu"}
-                       value={"niepełnosprawnym"} onChange={handleChangeToWhere}/>niepełnosprawnym
+                <input type="button" id={"niepełnosprawnym"} name={"komu"}
+                       value={"niepełnosprawnym"} onChange={handleChangeToWhere}/>
             </label>
             <label>
-                <input type="radio" id={"Starszym"} name={"komu"}
-                       value={"Starszym"} onChange={handleChangeToWhere}/>Osobom starszym
+                <input type="button" id={"Starszym"} name={"komu"}
+                       value={"Starszym"} onChange={handleChangeToWhere}/>
             </label>
-
+                </div>
             <h5> Wpisz nazwę konkretnej instytucji (opcjonalnie):</h5>
-            <label>
+            <label className={"instytucja"}>
                 <input onChange={handleChangePlace} value={place}/>
             </label>
 

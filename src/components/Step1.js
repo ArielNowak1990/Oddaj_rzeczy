@@ -32,26 +32,26 @@ function Step1({next}) {
                 <img src={bearBackground} alt="bearBackground" className={"bearBackground"}/>
             <h4> Krok 1/4 </h4>
             <h3> Zaznacz co chcesz oddać:</h3>
-            <form>
+            <form className={"step1_form"}>
                 <label>
                     <input type="radio" id={"dobre_ubrania"} name={"przekazanie"}
-                           value={"dobre_ubrania"} onChange={handleChangeMaterial}/>Ubrania, nadające się do ponownego użycia
+                           value={"dobre_ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania, nadające się do ponownego użycia
                 </label>
                 <label>
                     <input type="radio" id={"zle_ubrania"} name={"przekazanie"}
-                           value={"zle_ubrania"} onChange={handleChangeMaterial}/>Ubrania do wyrzucenia
+                           value={"zle_ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania do wyrzucenia
                 </label>
                 <label>
                     <input type="radio" id={"zabawki"} name={"przekazanie"}
-                           value={"zabawki"} onChange={handleChangeMaterial}/>Zabawki
+                           value={"zabawki"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Zabawki
                 </label>
                 <label>
                     <input type="radio" id={"ksiazki"} name={"przekazanie"}
-                           value={"ksiazki"} onChange={handleChangeMaterial}/>Książki
+                           value={"ksiazki"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Książki
                 </label>
                 <label>
                     <input type="radio" id={"inne"} name={"przekazanie"}
-                           value={"inne"} onChange={handleChangeMaterial}/>Inne
+                           value={"inne"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Inne
                 </label>
             </form>
 
