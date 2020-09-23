@@ -6,7 +6,7 @@ import Step from "./Step";
 const StepContext = createContext();
 
 function Steps(props) {
-    const [dane, setDane] =useState({
+    const [dane, setDane] = useState({
         material: "",
         howMany: "",
         from: "",
@@ -29,11 +29,12 @@ function Steps(props) {
 
 
     return (
+
         <div className="App">
             <StepContext.Provider value={{dane, handleChange}}>
                 {props.children}
             <HomeHeads/>
-            <Step/>
+                <Step/>
             <Contact/>
             </StepContext.Provider>
         </div>
