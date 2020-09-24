@@ -34,12 +34,12 @@ function Step1({next}) {
             <h3> Zaznacz co chcesz oddać:</h3>
             <form className={"step1_form"}>
                 <label>
-                    <input type="radio" id={"dobre_ubrania"} name={"przekazanie"}
-                           value={"dobre_ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania, nadające się do ponownego użycia
+                    <input type="radio" id={"dobre ubrania"} name={"przekazanie"}
+                           value={"dobre ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania, nadające się do ponownego użycia
                 </label>
                 <label>
-                    <input type="radio" id={"zle_ubrania"} name={"przekazanie"}
-                           value={"zle_ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania do wyrzucenia
+                    <input type="radio" id={"zle ubrania"} name={"przekazanie"}
+                           value={"zle ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania do wyrzucenia
                 </label>
                 <label>
                     <input type="radio" id={"zabawki"} name={"przekazanie"}

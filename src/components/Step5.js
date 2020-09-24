@@ -32,8 +32,8 @@ function Step5({next, prev}) {
                     <div className={"sum_first"}>
                         <h4> Podsumowanie Twojej darowizny:</h4>
                         <h5> Oddajesz:</h5>
-                        <h5><img src={log1} alt="" className={"step5_img"}/><div> {dane.howMany}, {dane.material}, {dane.to}</div></h5>
-                        <h5><img src={log4} alt="" className={"step5_img"}/><div> dla lokalizacji {dane.from}:</div></h5>
+                        <h5><img src={log1} alt="" className={"step5_img"}/><div> ilość worków: {dane.howMany}, zawierające: {dane.material}, dla: {dane.to}</div></h5>
+                        <h5><img src={log4} alt="" className={"step5_img"}/><div> dla lokalizacji {dane.from}</div></h5>
                     </div>
                     <div className={"sum_container"}>
                         <div className={"sum_sec"}>
@@ -53,7 +53,7 @@ function Step5({next, prev}) {
                             </label>
                             <label> Godzina: {dane.hour}
                             </label>
-                            <label> Uwagi dla kuriera {dane.infor}
+                            <label> Uwagi dla kuriera: {dane.infor}
                             </label>
                         </div>
                     </div>

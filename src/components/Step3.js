@@ -65,24 +65,24 @@ function Step3({next,prev}) {
             <h5> Komu chciałbyś pomóc:</h5>
                 <div className={"person_help"}>
             <label>
-                <input type="checkbox" id={"dzieciom"} name={"komu"}
-                        value={"dzieciom"} onChange={handleChangeToWhere}/><span className={"check_button"}>dzieciom</span>
+                <input type="checkbox" id={"dzieci"} name={"komu"}
+                        value={"dzieci"} onChange={handleChangeToWhere}/><span className={"check_button"}>dzieciom</span>
             </label>
             <label>
-                <input type="checkbox" id={"samotnym_matkom"} name={"komu"}
-                       value={"samotnym_matkom"} onChange={handleChangeToWhere}/><span className={"check_button"}>samotnym matkom</span>
+                <input type="checkbox" id={"samotnych matek"} name={"komu"}
+                       value={"samotnych matek"} onChange={handleChangeToWhere}/><span className={"check_button"}>samotnym matkom</span>
             </label>
             <label>
-                <input type="checkbox" id={"bezdomnym"} name={"komu"}
-                       value={"bezdomnym"} onChange={handleChangeToWhere}/><span className={"check_button"}>bezdomnym</span>
+                <input type="checkbox" id={"bezdomnych"} name={"komu"}
+                       value={"bezdomnych"} onChange={handleChangeToWhere}/><span className={"check_button"}>bezdomnym</span>
             </label>
             <label>
-                <input type="checkbox" id={"niepełnosprawnym"} name={"komu"}
-                       value={"niepełnosprawnym"} onChange={handleChangeToWhere}/><span className={"check_button"}>niepełnosprawnym</span>
+                <input type="checkbox" id={"niepełnosprawnych"} name={"komu"}
+                       value={"niepełnosprawnych"} onChange={handleChangeToWhere}/><span className={"check_button"}>niepełnosprawnym</span>
             </label>
             <label>
-                <input type="checkbox" id={"Starszym"} name={"komu"}
-                       value={"Starszym"} onChange={handleChangeToWhere}/><span className={"check_button"}>Starszym</span>
+                <input type="checkbox" id={"osób starszych"} name={"komu"}
+                       value={"osób starszych"} onChange={handleChangeToWhere}/><span className={"check_button"}>Starszym</span>
             </label>
                 </div>
             <h5> Wpisz nazwę konkretnej instytucji (opcjonalnie):</h5>
