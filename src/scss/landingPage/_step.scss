@@ -31,7 +31,7 @@
   margin-bottom: 50px;
   position: relative;
   z-index: 1;
-  background-color: rgba(182, 180, 180, 0.38);
+  background-color: rgba(232, 231, 226, 1);
   min-height: 500px;
 
   input, label, select, {
@@ -40,10 +40,10 @@
 
   .bearBackground {
     position: absolute;
-    right: 0px;
+    right: 0;
     z-index: 0;
-    width: 100%;
-    height: auto;
+    height: 100%;
+    max-width: 1200px;
     margin-top: -20px;
   }
 
@@ -291,3 +291,14 @@
   align-items: stretch;
 }
 
+.last_decor{
+  z-index: 3;
+}
+
+.last_form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}

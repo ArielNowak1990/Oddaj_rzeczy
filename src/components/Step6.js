@@ -1,5 +1,6 @@
 import React from "react";
 import bearBackground from "../assets/Background-Form.jpg";
+import decoration from "../assets/Decoration.svg"
 
 
 function Step6() {
@@ -12,10 +13,14 @@ function Step6() {
             </div>
             <div className={"formularz"}>
                 <img src={bearBackground} alt="bearBackground" className={"bearBackground"}/>
+                <div className={"last_form"}>
                 <h3> Dziękujemy ! </h3>
                 <h3> że podzieliłeś się z najbardziej potrzebującymi !</h3>
+                <img src={decoration} alt="decor" className={"last_decor"}/>
                 <div>
-                    <button>Strona główna</button>
+
+                    <a href="http://localhost:3001/"><button>Strona główna</button></a>
+                </div>
                 </div>
             </div>
         </div>
