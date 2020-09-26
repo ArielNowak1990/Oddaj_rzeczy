@@ -17,7 +17,8 @@ function PageLog() {
         if (re.test(email) !== true) {
             setError({
                 ...error,
-                emailError: 'Email nieprawidłowy!'
+                emailError: 'Email nieprawidłowy!',
+                passError: ""
             })
             isValidate = false
         } else if (password.length < 6 ||
@@ -67,6 +68,7 @@ function PageLog() {
                                    placeholder={"Email"}
                                    onChange={e => setEmail(e.target.value)}
                             />
+                            <ul className={"log_error"}>{error.emailError}</ul>
                         </div>
                         <div>
                             <input type="password"
@@ -74,6 +76,7 @@ function PageLog() {
                                    placeholder={"Haslo"}
                                    onChange={e => setPassword(e.target.value)}
                             />
+                            <ul className={"log_error"}>{error.passError}</ul>
                         </div>
                         <div className={"LogSign_buttons"}>
                             <button type="submit" className={"button_main nonactive"}>ZALOGUJ</button>
@@ -81,11 +84,6 @@ function PageLog() {
                                 <button type="text" className={"button_main"}>ZAłÓŻ KONTO</button>
                             </Link>
                         </div>
-
-                        <ul>
-                        {error.emailError}
-                        {error.passError}
-                        </ul>
                     </form>
                 </div>
 

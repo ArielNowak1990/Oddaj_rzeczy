@@ -22,7 +22,8 @@ function PageSign() {
         if (re.test(mail) !== true) {
             setError({
                 ...error,
-                emailError: 'Email nieprawidłowy!'
+                emailError: 'Email nieprawidłowy!',
+                passError: ""
             })
             isValidate = false
         } else if (password.length < 6 ||
@@ -31,6 +32,7 @@ function PageSign() {
             passwordRepeat !== password) {
             setError({
                 ...error,
+                emailError: "",
                 passError: 'Hasło muszą conjamniej 6 znaków i być takie same'
             })
             isValidate = false
@@ -56,6 +58,9 @@ function PageSign() {
                 setPassword(""),
                 setPasswordRepeat("")
             )
+            .then(
+                window.location.href="http://localhost:3001/login"
+            )
             .catch(error => {
                 console.log(error)
             })
@@ -76,6 +81,7 @@ function PageSign() {
                                    placeholder={"Mail"}
                                    onChange={e => setMail(e.target.value)}
                             />
+                          <ul className={"reg_error"}>{error.emailError}</ul>
                         </div>
                         <div>
                             <input type="password"
@@ -90,10 +96,10 @@ function PageSign() {
                                    placeholder={"Powtórz hasło"}
                                    onChange={e => setPasswordRepeat(e.target.value)}
                             />
+                           <ul className={"reg_error"}>{error.passError}</ul>
                         </div>
                         <div className={"LogSign_buttons"}>
                             <button type="submit" className={"button_main nonactive"}>REJESTRUJ!</button>
-                            {error.length && error?.map( (element,index) => {return(<ul key={index}><li>{element}</li></ul>) })}
                             <Link to='/login'>
                                 <button type="text" className={"button_main"}>ZALOGUJ SIĘ</button>
                             </Link>
