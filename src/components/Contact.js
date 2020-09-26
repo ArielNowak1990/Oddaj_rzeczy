@@ -89,7 +89,7 @@ function Contact() {
                             <div className={'contact__wrapper'}>
                                 <h3 className={'contact__subtitle'}>Wpisz swój email</h3>
                                 <input value={email} onChange={handleChangeEmail}
-                                       className={'contact__input contact__email'}/>
+                                       className={'contact__input contact__email'} placeholder={"Krzysztof@mail.pl"}/>
                                <div className={"error"}>{error1}</div>
                             </div>
                         </div>
@@ -98,9 +98,9 @@ function Contact() {
                             <h3 className={'contact__subtitle'}>Wpisz swoją wiadomosć</h3>
                             <textarea value={message} onChange={handleChangeMessage}
                                       className={'contact__input contact__message '}
-                                      placeholder={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, ' +
-                                      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ' +
-                                      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ' +
+                                      placeholder={'Lorem ipsum dolor sit amet, ' +
+                                      'sed do eiusmod tempor incididunt ut labore. ' +
+                                      'Ut enim ad minim veniam, ullamco laboris ' +
                                       'nisi ut aliquip ex ea commodo consequat.'}/>
                             <div className={"error"}>{error2}</div>
                         </div>

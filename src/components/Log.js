@@ -23,7 +23,7 @@ function PageLog() {
         } else if (password.length < 6 ||
             password === ''){
             setError({
-                ...error,
+                emailError: '',
                 passError: 'Hasło jest za krótkie!'
             })
             isValidate = false
@@ -41,7 +41,6 @@ function PageLog() {
                 setEmail(""),
                 setPassword(""),
                 console.log("dziala")
-
             )
             .then(
                 window.location.href="http://localhost:3001/steps"
@@ -84,11 +83,8 @@ function PageLog() {
                         </div>
 
                         <ul>
-                        {error.length && error?.map((element, index) => {
-                            return (
-                                <li key={index}>{element}</li>
-                            )
-                        })}
+                        {error.emailError}
+                        {error.passError}
                         </ul>
                     </form>
                 </div>
