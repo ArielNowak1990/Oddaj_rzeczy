@@ -13,6 +13,7 @@ function Step4({next, prev}) {
     const [date, setDate] = useState()
     const [hour, setHour] = useState()
     const [info, setInfo] = useState()
+    const [startDate, setStartDate] = useState(new Date());
 
     let adress = {
             street: street,
@@ -118,7 +119,15 @@ function Step4({next, prev}) {
                                 <input onChange={handleChangeDate}/>
                             </label>
                             <label> Godzina:
-                                <input onChange={handleChangeHour}/>
+                                <DatePicker
+                                    selected={startDate}
+                                    onChange={date => setStartDate(date)}
+                                    showTimeSelect
+                                    showTimeSelectOnly
+                                    timeIntervals={30}
+                                    timeCaption="Time"
+                                    dateFormat="hh:mm"
+                               />
                             </label>
                             <label> Uwagi dla kuriera
                                 <input onChange={handleChangeInfo}/>
