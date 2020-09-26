@@ -1,6 +1,7 @@
 import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
+import DatePicker from 'react-datepicker';
 
 
 function Step4({next, prev}) {
