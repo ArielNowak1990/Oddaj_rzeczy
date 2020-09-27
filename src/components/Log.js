@@ -8,6 +8,7 @@ function PageLog() {
     const [email, setEmail] = useState([])
     const [password, setPassword] = useState([])
     const [error, setError] = useState([])
+    const [firebaseError, setFirebaseError] = useState([])
     const firebase = useContext(FirebaseContext)
 
 
@@ -41,12 +42,14 @@ function PageLog() {
             .then(() => {
                     setEmail("")
                     setPassword("")
+                    setFirebaseError("")
                     console.log("dziala")
             })
             .then( (login) => {if (login) {window.location.href="http://localhost:3001/steps"}}
             )
             .catch(error => {
-                console.log(error)
+                setFirebaseError({...error})
+                console.log({...error})
             })
     }
 
@@ -74,6 +77,7 @@ function PageLog() {
                                    onChange={e => setPassword(e.target.value)}
                             />
                             <ul className={"log_error"}>{error.passError}</ul>
+                            <ul className={"log_error"}>{firebaseError.message}</ul>
                         </div>
                         <div className={"LogSign_buttons"}>
                             <button type="submit" className={"button_main nonactive"}>ZALOGUJ</button>
