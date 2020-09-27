@@ -6,9 +6,9 @@ import bearBackground from "../assets/Background-Form.jpg";
 function Step3({next,prev}) {
     let {dane, handleChange} = useContext(StepContext);
 
-    const [from, setFrom] = useState("");
-    const [toWhere, setToWhere] = useState("");
-    const [place, setPlace] = useState("");
+    const [from, setFrom] = useState(dane.from);
+    const [toWhere, setToWhere] = useState(dane.to);
+    const [place, setPlace] = useState(dane.place);
 
     const handleClickNext = () => {
         let object = {
@@ -26,19 +26,19 @@ function Step3({next,prev}) {
 
     const handleChangeFrom = (ev) => {
         setFrom(ev.target.value)
-        // dane={...dane, material: ev.target.value}
+        dane={...dane, material: ev.target.value}
         console.log(dane)
     }
 
     const handleChangeToWhere = (ev) => {
         setToWhere(ev.target.value)
-        // dane={...dane, material: ev.target.value}
+        dane={...dane, material: ev.target.value}
         console.log(dane)
     }
 
     const handleChangePlace = (ev) => {
         setPlace(ev.target.value)
-        // dane={...dane, material: ev.target.value}
+        dane={...dane, material: ev.target.value}
         console.log(dane)
     }
 
@@ -54,7 +54,8 @@ function Step3({next,prev}) {
             <h4> Krok 3/4 </h4>
             <h5> Lokalizacja, odbiór z:</h5>
             <label htmlFor="place" className={"place"}/>
-            <select id="place" name="place" onChange={handleChangeFrom} className={"place_select"}>
+            <select value={from} id="place" name="place" onChange={handleChangeFrom} className={"place_select"}>
+                <option value="wybierz">wybierz</option>
                 <option value="Kraków">Kraków</option>
                 <option value="Warszawa">Warszawa</option>
                 <option value="Poznań">Poznań</option>
@@ -66,23 +67,23 @@ function Step3({next,prev}) {
                 <div className={"person_help"}>
             <label>
                 <input type="checkbox" id={"dzieci"} name={"komu"}
-                        value={"dzieci"} onChange={handleChangeToWhere}/><span className={"check_button"}>dzieciom</span>
+                        value={"dzieci"} checked={toWhere === 'dzieci'} onChange={handleChangeToWhere}/><span className={"check_button"}>dzieciom</span>
             </label>
             <label>
                 <input type="checkbox" id={"samotnych matek"} name={"komu"}
-                       value={"samotnych matek"} onChange={handleChangeToWhere}/><span className={"check_button"}>samotnym matkom</span>
+                       value={"samotnych matek"} checked={toWhere === 'samotnych matek'} onChange={handleChangeToWhere}/><span className={"check_button"}>samotnym matkom</span>
             </label>
             <label>
                 <input type="checkbox" id={"bezdomnych"} name={"komu"}
-                       value={"bezdomnych"} onChange={handleChangeToWhere}/><span className={"check_button"}>bezdomnym</span>
+                       value={"bezdomnych"} checked={toWhere === 'bezdomnych'} onChange={handleChangeToWhere}/><span className={"check_button"}>bezdomnym</span>
             </label>
             <label>
                 <input type="checkbox" id={"niepełnosprawnych"} name={"komu"}
-                       value={"niepełnosprawnych"} onChange={handleChangeToWhere}/><span className={"check_button"}>niepełnosprawnym</span>
+                       value={"niepełnosprawnych"} checked={toWhere === 'niepełnosprawnych'} onChange={handleChangeToWhere}/><span className={"check_button"}>niepełnosprawnym</span>
             </label>
             <label>
                 <input type="checkbox" id={"osób starszych"} name={"komu"}
-                       value={"osób starszych"} onChange={handleChangeToWhere}/><span className={"check_button"}>Starszym</span>
+                       value={"osób starszych"} checked={toWhere === 'osób starszych'} onChange={handleChangeToWhere}/><span className={"check_button"}>Starszym</span>
             </label>
                 </div>
             <h5> Wpisz nazwę konkretnej instytucji (opcjonalnie):</h5>

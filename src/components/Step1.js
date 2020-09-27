@@ -35,23 +35,23 @@ function Step1({next}) {
             <form className={"step1_form"}>
                 <label>
                     <input type="radio" id={"dobre ubrania"} name={"przekazanie"}
-                           value={"dobre ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania, nadające się do ponownego użycia
+                           value={"dobre ubrania"} checked={material === 'dobre ubrania'} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania, nadające się do ponownego użycia
                 </label>
                 <label>
                     <input type="radio" id={"zle ubrania"} name={"przekazanie"}
-                           value={"zle ubrania"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania do wyrzucenia
+                           value={"zle ubrania"} checked={material === 'zle ubrania'} onChange={handleChangeMaterial}/><span className={"quarter"}/>Ubrania do wyrzucenia
                 </label>
                 <label>
                     <input type="radio" id={"zabawki"} name={"przekazanie"}
-                           value={"zabawki"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Zabawki
+                           value={"zabawki"} checked={material === 'zabawki'} onChange={handleChangeMaterial}/><span className={"quarter"}/>Zabawki
                 </label>
                 <label>
                     <input type="radio" id={"ksiazki"} name={"przekazanie"}
-                           value={"ksiazki"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Książki
+                           value={"ksiazki"} checked={material === 'ksiazki'} onChange={handleChangeMaterial}/><span className={"quarter"}/>Książki
                 </label>
                 <label>
                     <input type="radio" id={"inne"} name={"przekazanie"}
-                           value={"inne"} onChange={handleChangeMaterial}/><span className={"quarter"}/>Inne
+                           value={"inne"} checked={material === 'inne'} onChange={handleChangeMaterial}/><span className={"quarter"}/>Inne
                 </label>
             </form>
 

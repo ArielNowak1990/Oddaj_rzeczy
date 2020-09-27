@@ -79,6 +79,7 @@
     align-items: center;
     width: 100%;
     background-color: white;
+    cursor: pointer;
     @include desktop {
       position: static;
       display: flex;

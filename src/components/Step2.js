@@ -36,7 +36,8 @@ function Step2({next,prev}) {
             <h4> Krok 2/4 </h4>
             <h3> Podaj liczbę 60l worków, w które spakowałeś rzeczy:</h3>
             <label htmlFor="worki"><h4>liczba 60l worków:</h4></label>
-            <select className={"worki"} id="worki" name="ilosc" onChange={handleChangeMaterial}>
+            <select value={howMany} className={"worki"} id="worki" name="ilosc" onChange={handleChangeMaterial}>
+                <option value="wybierz">wybierz</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

@@ -51,8 +51,6 @@ function PageLog() {
             })
     }
 
-
-
     return (
         <section className={"container"}>
             <HomeHead/>

@@ -309,3 +309,31 @@
   flex-direction: column;
   margin-top: 50px;
 }
+
+.react-datepicker__time-list{
+  width: 100px;
+  height: 150px;
+  overflow-y: scroll;
+  display: block;
+  position: absolute;
+  right: -290px;
+  top: -50px;
+  z-index: 2;
+  li{
+    background-color: white;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+}
+.react-datepicker__tab-loop{
+  line-height: 25px;
+}
+.react-datepicker-time__header{
+  display: none;
+  color: white;
+}
+
+.textarea input{
+  height: 40px;
+}

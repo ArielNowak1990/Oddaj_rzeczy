@@ -1,18 +1,21 @@
 import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
-import DatePicker from 'react-datepicker';
+import DatePicker, {registerLocale, setDefaultLocale} from 'react-datepicker';
+import pl from "date-fns/locale/pl"
+registerLocale("PL", pl);
 
+// setDefaultLocale(pl)
 
 function Step4({next, prev}) {
     let {dane, handleChange} = useContext(StepContext);
-    const [street, setStreet] = useState()
-    const [city, setCity] = useState()
-    const [code, setCode] = useState()
-    const [number, setNumber] = useState()
-    const [date, setDate] = useState()
-    const [hour, setHour] = useState()
-    const [info, setInfo] = useState()
+    const [street, setStreet] = useState(dane.street)
+    const [city, setCity] = useState(dane.city)
+    const [code, setCode] = useState(dane.code)
+    const [number, setNumber] = useState(dane.number)
+    const [date, setDate] = useState(dane.date)
+    const [hour, setHour] = useState(dane.hour)
+    const [info, setInfo] = useState(dane.info)
     const [startDate, setStartDate] = useState(new Date());
 
     let adress = {
@@ -30,6 +33,7 @@ function Step4({next, prev}) {
 
         if (typeof handleChange === "function") {
             handleChange(adress)
+
         }
         if (typeof next === "function") {
             next()
@@ -101,36 +105,39 @@ function Step4({next, prev}) {
                         <div className={"adresss_your"}>
                             <h5>Adres odbioru</h5>
                             <label> Ulica:
-                                <input onChange={handleChangeStreet}/>
+                                <input onChange={handleChangeStreet} value={street}/>
                             </label>
                             <label> Miasto:
-                                <input onChange={handleChangeCity}/>
+                                <input onChange={handleChangeCity} value={city}/>
                             </label>
                             <label> Kod pocztowy:
-                                <input onChange={handleChangeCode}/>
+                                <input onChange={handleChangeCode} value={code}/>
                             </label>
                             <label> Numer telefonu:
-                                <input onChange={handleChangeNumber}/>
+                                <input onChange={handleChangeNumber} value={number}/>
                             </label>
                         </div>
                         <div className={"adresss_info"}>
                             <h5>Termin odbioru</h5>
                             <label> Data:
-                                <input onChange={handleChangeDate}/>
+                                <input onChange={handleChangeDate} placeholder={"day/month/year"} value={date}/>
                             </label>
                             <label> Godzina:
                                 <DatePicker
                                     selected={startDate}
-                                    onChange={date => setStartDate(date)}
+                                    onChange={date => {
+                                        setStartDate(date)
+                                    }}
                                     showTimeSelect
                                     showTimeSelectOnly
                                     timeIntervals={30}
-                                    timeCaption="Time"
-                                    dateFormat="hh:mm"
+                                    // timeCaption="Time"
+                                    dateFormat="HH:mm"
+                                    locale="PL"
                                />
                             </label>
-                            <label> Uwagi dla kuriera
-                                <input onChange={handleChangeInfo}/>
+                            <label className={"textarea"}> Uwagi dla kuriera:
+                                <input onChange={handleChangeInfo} value={info}/>
                             </label>
                         </div>
                     </div>
