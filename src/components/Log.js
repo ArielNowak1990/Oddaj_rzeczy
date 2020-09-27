@@ -38,11 +38,11 @@ function PageLog() {
 
         firebase
             .doSignInWithEmailAndPassword(email, password)
-            .then(
-                setEmail(""),
-                setPassword(""),
-                console.log("dziala")
-            )
+            .then(() => {
+                setEmail("")
+                    setPassword("")
+                    console.log("dziala")
+            })
             .then(
                 window.location.href="http://localhost:3001/steps"
             )

@@ -2,8 +2,10 @@ import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
 import DatePicker, {registerLocale, setDefaultLocale} from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 import pl from "date-fns/locale/pl"
 registerLocale("PL", pl);
+
 
 // setDefaultLocale(pl)
 
@@ -119,24 +121,25 @@ function Step4({next, prev}) {
                         </div>
                         <div className={"adresss_info"}>
                             <h5>Termin odbioru</h5>
-                            <label> Data:
-                                <input onChange={handleChangeDate} placeholder={"day/month/year"} value={date}/>
-                            </label>
-                            <label> Godzina:
+                            <label className={"datapickers"}> <div className={"datapickers_div"} >Data:</div>
                                 <DatePicker
                                     selected={startDate}
-                                    onChange={date => {
-                                        setStartDate(date)
-                                    }}
+                                    onChange={date => setStartDate(date)}
+                                    withPortal
+                                />
+                            </label>
+                            <label className={"change_index datapickers"}> <div className={"datapickers_div"}>Godzina:</div>
+                                <DatePicker
+                                    selected={startDate}
+                                    onChange={date => {setStartDate(date)}}
                                     showTimeSelect
                                     showTimeSelectOnly
                                     timeIntervals={30}
-                                    // timeCaption="Time"
                                     dateFormat="HH:mm"
                                     locale="PL"
                                />
                             </label>
-                            <label className={"textarea"}> Uwagi dla kuriera:
+                            <label className={"textarea change_index datapickers"}> <div className={"datapickers_div"}>Uwagi dla kuriera:</div>
                                 <input onChange={handleChangeInfo} value={info}/>
                             </label>
                         </div>

@@ -310,30 +310,58 @@
   margin-top: 50px;
 }
 
-.react-datepicker__time-list{
-  width: 100px;
-  height: 150px;
-  overflow-y: scroll;
-  display: block;
-  position: absolute;
-  right: -290px;
-  top: -50px;
-  z-index: 2;
-  li{
-    background-color: white;
-    display: block;
-    position: relative;
-    z-index: 2;
-  }
-}
-.react-datepicker__tab-loop{
-  line-height: 25px;
-}
-.react-datepicker-time__header{
-  display: none;
-  color: white;
-}
+//.react-datepicker__time-list{
+//  width: 100px;
+//  height: 150px;
+//  overflow-y: scroll;
+//  display: block;
+//  position: absolute;
+//  right: -290px;
+//  top: -50px;
+//  z-index: 2;
+//  li{
+//    background-color: white;
+//    display: block;
+//    position: relative;
+//    z-index: 2;
+//  }
+//}
+//.react-datepicker__tab-loop{
+//  line-height: 25px;
+//}
+//.react-datepicker-time__header{
+//  display: none;
+//  color: white;
+//}
 
 .textarea input{
   height: 40px;
+}
+
+.formularz .change_index{
+  position: relative;
+  display: flex;
+  z-index: 0;
+}
+
+.formularz button{
+  position: relative;
+  z-index: 0;
+}
+
+.datapickers{
+  display: flex;
+  justify-content: stretch;
+  text-align: center;
+
+  .datapickers_div{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.react-datepicker__time-container {
+position: absolute;
+  right: -270px;
+  top: -68px;
 }
