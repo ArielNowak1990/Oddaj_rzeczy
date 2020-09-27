@@ -9,7 +9,7 @@ function PageLog() {
     const [password, setPassword] = useState([])
     const [error, setError] = useState([])
     const firebase = useContext(FirebaseContext)
-    console.log(firebase)
+
 
     function validate() {
         const re = /\S+@\S+\.\S+/;
@@ -39,12 +39,11 @@ function PageLog() {
         firebase
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
-                setEmail("")
+                    setEmail("")
                     setPassword("")
                     console.log("dziala")
             })
-            .then(
-                window.location.href="http://localhost:3001/steps"
+            .then( (login) => {if (login) {window.location.href="http://localhost:3001/steps"}}
             )
             .catch(error => {
                 console.log(error)
