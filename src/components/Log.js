@@ -8,7 +8,7 @@ function PageLog() {
     const [email, setEmail] = useState([])
     const [password, setPassword] = useState([])
     const [error, setError] = useState([])
-    const [firebaseError, setFirebaseError] = useState([])
+    const [firebaseError, setFirebaseError] = useState(false)
     const firebase = useContext(FirebaseContext)
 
 
@@ -42,15 +42,15 @@ function PageLog() {
             .then(() => {
                     setEmail("")
                     setPassword("")
-                    setFirebaseError("")
+                    setFirebaseError(false)
                     console.log("dziala")
             })
-            .then( (login) => {if (login) {window.location.href="http://localhost:3001/steps"}}
-            )
             .catch(error => {
                 setFirebaseError({...error})
                 console.log({...error})
             })
+            setTimeout(function(){if (firebaseError===false){window.location.href="http://localhost:3001/steps"}},2500)
+
     }
 
     return (
