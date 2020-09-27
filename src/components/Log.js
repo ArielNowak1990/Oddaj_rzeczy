@@ -42,15 +42,17 @@ function PageLog() {
             .then(() => {
                     setEmail("")
                     setPassword("")
-                    setFirebaseError(false)
+                    setFirebaseError(true)
                     console.log("dziala")
             })
             .catch(error => {
                 setFirebaseError({...error})
                 console.log({...error})
+                return
             })
-            setTimeout(function(){if (firebaseError===false){window.location.href="http://localhost:3001/steps"}},2500)
-
+        if (firebaseError.message===false){
+            window.location.href="http://localhost:3001/steps"
+    }
     }
 
     return (
