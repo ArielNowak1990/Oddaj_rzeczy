@@ -140,7 +140,10 @@
 .summary{
   width: 50%;
   min-width: 500px;
-  margin-top: 60px;
+  margin-top: 40px;
+  z-index: 1;
+  padding: 20px;
+  background-color: rgba(252, 252, 252, 0.68);
   .summary_title{
     font-size: 2.5em;
     text-align: center;
