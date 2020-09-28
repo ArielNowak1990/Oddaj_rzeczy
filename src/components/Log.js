@@ -46,13 +46,13 @@ function PageLog() {
                     console.log("dziala")
                     window.location.href="http://localhost:3001/steps"
             })
-            .then(data => {
-                console.log(data.message)
-            })
+            // .then(data => {
+            //     console.log(data.message)
+            // })
             .catch(error => {
                 setFirebaseError({...error})
                 console.log({...error})
-                return
+                // return
             })
     }
 

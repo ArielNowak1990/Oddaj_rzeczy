@@ -17,7 +17,7 @@ function WeHelp() {
     const [locals, setLocals] = useState([])
 
     useEffect( () => {
-        return (
+
             fetch(`${API_URL}/Organization`)
             .then(response => {
                 if (response.ok === false) {throw new Error("błąd")} else {return response.json();}
@@ -26,7 +26,7 @@ function WeHelp() {
                 setOrganizations([...data])
                 return data;
             })
-            .catch(err => console.log(err)),
+            .catch(err => console.log(err))
 
         fetch(`${API_URL}/Fundation`)
             .then(response => {
@@ -36,7 +36,7 @@ function WeHelp() {
                 setFoundations([...data])
                 return data;
             })
-            .catch(err => console.log(err)),
+            .catch(err => console.log(err))
 
         fetch(`${API_URL}/Locals`)
             .then(response => {
@@ -47,7 +47,7 @@ function WeHelp() {
                 return data;
             })
             .catch(err => console.log(err))
-        )
+
     },[])
     //AXIOS.ALL
 
@@ -58,7 +58,7 @@ function WeHelp() {
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentFoundationsPosts = foundations.slice(indexOfFirstPost, indexOfLastPost);
-    const numberOfPages =foundations.length/postsPerPage
+    const numberOfPages = foundations.length/postsPerPage
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
@@ -104,7 +104,6 @@ function WeHelp() {
     }
 if (!locals){return ("....wczytywanie")}
     if (locals) {
-
     return (
 
         <section className={'help'} id={'help'}>
