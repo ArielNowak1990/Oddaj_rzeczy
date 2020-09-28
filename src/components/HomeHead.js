@@ -21,26 +21,24 @@ function HomeHead() {
                 </div>
                 <ul className={menuClick ? 'menu menu__active' : 'menu'}>
                     <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose}>Start</a></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'steps'}
+                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose}
+                                                       href={'http://localhost:3001/#steps'}
                                                                 spy={true}
                                                                 smooth={true}
-                                                                duration={500}>o co chodzi?</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'about'}
+                                                                duration={500}>o co chodzi?</a></li>
+                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose}
+                                                                href={'http://localhost:3001/#about'}
                                                                 spy={true}
                                                                 smooth={true}
-                                                                duration={500}>O nas</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'help'}
+                                                                duration={500}>O nas</a></li>
+                    <li className={'menu__element'}><a href={'http://localhost:3001/#help'} className={'menu__link'} onClick={handleMenuClose}
                                                                 spy={true}
                                                                 smooth={true}
-                                                                duration={500}>Fundacje i organizacje</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'contact'}
+                                                                duration={500}>Fundacje i organizacje</a></li>
+                    <li className={'menu__element'}><a href={'http://localhost:3001/#contact'} className={'menu__link'} onClick={handleMenuClose}
                                                                 spy={true}
                                                                 smooth={true}
-                                                                duration={500}>Kontakt</LinkScroll></li>
+                                                                duration={500}>Kontakt</a></li>
                 </ul>
             </header>
         </section>
