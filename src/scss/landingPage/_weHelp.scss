@@ -102,10 +102,11 @@
   li{
     margin-left: 15px;
     margin-right: 15px;
+    cursor: pointer;
     .active{
-      color: red;
+      background-color: #FAD648;
       padding: 5px;
-      border: 1px solid black;
+      cursor: pointer;
     }
   }
 
