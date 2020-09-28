@@ -44,15 +44,16 @@ function PageLog() {
                     setPassword("")
                     setFirebaseError(true)
                     console.log("dziala")
+                    window.location.href="http://localhost:3001/steps"
+            })
+            .then(data => {
+                console.log(data.message)
             })
             .catch(error => {
                 setFirebaseError({...error})
                 console.log({...error})
                 return
             })
-        if (firebaseError.message===false){
-            window.location.href="http://localhost:3001/steps"
-    }
     }
 
     return (
