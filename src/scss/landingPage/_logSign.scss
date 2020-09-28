@@ -9,6 +9,7 @@
   align-items: center;
   transform: translateY(-75px);
 
+
   h3{
     font-size: 2.8em;
     margin-bottom: 20px;
@@ -39,7 +40,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  background-color: rgba(208, 208, 208, 0.3);
+  padding: 30px;
 }
 .LogSign_sec{
   width: 30%;
