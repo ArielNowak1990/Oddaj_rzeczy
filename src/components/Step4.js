@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
-import DatePicker, {registerLocale, setDefaultLocale} from 'react-datepicker';
+import DatePicker, {registerLocale} from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import pl from "date-fns/locale/pl"
 registerLocale("PL", pl);
@@ -71,18 +71,18 @@ function Step4({next, prev}) {
         dane={...dane, ...adress}
         console.log(dane)
     }
-    const handleChangeDate = (ev) => {
-        setDate(ev.target.value)
-        adress = {...adress, date: ev.target.value}
-        dane={...dane, ...adress}
-        console.log(dane)
-    }
-    const handleChangeHour = (ev) => {
-        setHour(ev.target.value)
-        adress = {...adress, hour: ev.target.value}
-        dane={...dane, ...adress}
-        console.log(dane)
-    }
+    // const handleChangeDate = (ev) => {
+    //     setDate(ev.target.value)
+    //     adress = {...adress, date: ev.target.value}
+    //     dane={...dane, ...adress}
+    //     console.log(dane)
+    // }
+    // const handleChangeHour = (ev) => {
+    //     setHour(ev.target.value)
+    //     adress = {...adress, hour: ev.target.value}
+    //     dane={...dane, ...adress}
+    //     console.log(dane)
+    // }
     const handleChangeInfo = (ev) => {
         setInfo(ev.target.value)
         adress = {...adress, infor: ev.target.value}

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useState} from 'react'
-import {Link as LinkScroll} from 'react-scroll';
+// import {Link as LinkScroll} from 'react-scroll';
 
 function HomeHead() {
     const [menuClick, setMenuClick] = useState(false)
