@@ -23,27 +23,12 @@ function HomeHeads() {
                     {(menuClick) ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
                 </div>
                 <ul className={menuClick ? 'menu menu__active' : 'menu'}>
-                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose}>Start</a></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'steps'}
-                                                                spy={true}
-                                                                smooth={true}
-                                                                duration={500}>o co chodzi?</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'about'}
-                                                                spy={true}
-                                                                smooth={true}
-                                                                duration={500}>O nas</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'help'}
-                                                                spy={true}
-                                                                smooth={true}
-                                                                duration={500}>Fundacje i organizacje</LinkScroll></li>
-                    <li className={'menu__element'}><LinkScroll className={'menu__link'} onClick={handleMenuClose}
-                                                                to={'contact'}
-                                                                spy={true}
-                                                                smooth={true}
-                                                                duration={500}>Kontakt</LinkScroll></li>
+                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose} href={'http://localhost:3001'}>Start</a></li>
+                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose} href={'http://localhost:3001/#steps'}>o co chodzi?</a></li>
+                    <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose} href={'http://localhost:3001/#about'}>O nas</a></li>
+                    <li className={'menu__element'}><a href={'http://localhost:3001/#help'} className={'menu__link'} onClick={handleMenuClose}>Fundacje i organizacje</a></li>
+                    <li className={'menu__element'}><a href={'http://localhost:3001/#contact'} className={'menu__link'} onClick={handleMenuClose}>Kontakt</a></li>
+
                 </ul>
 
             </header>
