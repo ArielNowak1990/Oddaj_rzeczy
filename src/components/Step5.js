@@ -4,6 +4,7 @@ import bearBackground from "../assets/Background-Form.jpg";
 import log1 from "../assets/Icon-1.svg"
 import log4 from "../assets/Icon-4.svg"
 
+
 function Step5({next, prev}) {
     let {dane} = useContext(StepContext);
     console.log(dane)
@@ -49,9 +50,9 @@ function Step5({next, prev}) {
                         </div>
                         <div className={"sum_third"}>
                             <h5>Termin odbioru</h5>
-                            <label> Data: {dane.date}
+                            <label> Data: {dane.date.slice(3,16)}
                             </label>
-                            <label> Godzina: {dane.hour}
+                            <label> Godzina: {dane.hour.slice(15,21)}
                             </label>
                             <label> Uwagi dla kuriera: {dane.information}
                             </label>

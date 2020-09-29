@@ -1,16 +1,16 @@
 import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
-import DatePicker, {registerLocale} from 'react-datepicker';
+import DatePicker, {setDefaultLocale}  from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import pl from "date-fns/locale/pl"
-registerLocale("PL", pl);
 
+// registerLocale("Pl", pl);
+
+setDefaultLocale(pl)
 
 function Step4({next, prev}) {
     let {dane, handleChange} = useContext(StepContext);
-
-    const today = new Date();
     const [street, setStreet] = useState(dane.street)
     const [city, setCity] = useState(dane.city)
     const [code, setCode] = useState(dane.code)
@@ -18,10 +18,17 @@ function Step4({next, prev}) {
     const [dates, setDate] = useState(dane.date)
     const [hour, setHour] = useState(dane.hour)
     const [info, setInfo] = useState(dane.information)
-    const [startDate, setStartDate] = useState(today);
-    const [startDate2, setStartDate2] = useState(today.getHours());
-    today.toLocaleDateString('pl-PL');
-    today.toLocaleTimeString('pl-PL', {hour12: false});
+    const date = new Date()
+    const [startDate, setStartDate] = useState(date);
+    const [startDate2, setStartDate2] = useState(date);
+
+    var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+    };
+    date.toLocaleDateString("Pl", options)
     let adress = {
             street: street,
             city: city,
@@ -130,9 +137,9 @@ function Step4({next, prev}) {
                                 <DatePicker
                                     selected={startDate}
                                     onChange={date => setStartDate(date)}
+                                    locale="Pl"
+                                    dateFormat="dd/MM/yyyy"
                                     withPortal
-                                    dateFormat="yyyy-MM-dd"
-
                                 />
                             </label>
                             <label className={"change_index datapickers"}> <div className={"datapickers_div"}>Godzina:</div>
@@ -142,8 +149,8 @@ function Step4({next, prev}) {
                                     showTimeSelect
                                     showTimeSelectOnly
                                     timeIntervals={30}
+                                    timeFormat="HH:mm"
                                     dateFormat="HH:mm"
-
                                />
                             </label>
                             <label className={"textarea change_index datapickers"}> <div className={"datapickers_div"}>Uwagi dla kuriera:</div>
