@@ -1,13 +1,13 @@
 import React, {useContext, useState} from "react";
 import {StepContext} from "./Steps";
 import bearBackground from "../assets/Background-Form.jpg";
-import DatePicker, {setDefaultLocale}  from 'react-datepicker';
+import DatePicker, {registerLocale} from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import pl from "date-fns/locale/pl"
 
-// registerLocale("Pl", pl);
+registerLocale("Pl", pl);
 
-setDefaultLocale(pl)
+// setDefaultLocale(pl)
 
 function Step4({next, prev}) {
     let {dane, handleChange} = useContext(StepContext);
