@@ -38,23 +38,23 @@ function Step5({next, prev}) {
                     </div>
                     <div className={"sum_container"}>
                         <div className={"sum_sec"}>
-                            <h5>Adres odbioru</h5>
-                            <label> Ulica: {dane.street}
+                            <h5>Adres odbioru:</h5>
+                            <label> Ulica: <span>{dane.street}</span>
                             </label>
-                            <label> Miasto: {dane.city}
+                            <label> Miasto: <span>{dane.city}</span>
                             </label>
-                            <label> Kod pocztowy: {dane.code}
+                            <label> Kod pocztowy: <span>{dane.code}</span>
                             </label>
-                            <label> Numer telefonu: {dane.number}
+                            <label> Numer telefonu: <span>{dane.number}</span>
                             </label>
                         </div>
                         <div className={"sum_third"}>
-                            <h5>Termin odbioru</h5>
-                            <label> Data: {dane.date.slice(3,16)}
+                            <h5>Termin odbioru:</h5>
+                            <label> Data: <span>{dane.date.slice(3,16)}</span>
                             </label>
-                            <label> Godzina: {dane.hour.slice(15,21)}
+                            <label> Godzina: <span>{dane.hour.slice(15,21)}</span>
                             </label>
-                            <label> Uwagi dla kuriera: {dane.information}
+                            <label> Uwagi dla kuriera: <span>{dane.information}</span>
                             </label>
                         </div>
                     </div>
