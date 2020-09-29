@@ -11,27 +11,32 @@ registerLocale("PL", pl);
 
 function Step4({next, prev}) {
     let {dane, handleChange} = useContext(StepContext);
+    const today = new Date();
     const [street, setStreet] = useState(dane.street)
     const [city, setCity] = useState(dane.city)
     const [code, setCode] = useState(dane.code)
     const [number, setNumber] = useState(dane.number)
-    const [date, setDate] = useState(dane.date)
+    const [dates, setDate] = useState(dane.date)
     const [hour, setHour] = useState(dane.hour)
-    const [info, setInfo] = useState(dane.info)
-    const [startDate, setStartDate] = useState(new Date());
+    const [info, setInfo] = useState(dane.information)
+    const [startDate, setStartDate] = useState(today);
+    const [startDate2, setStartDate2] = useState(today.getHours());
 
     let adress = {
             street: street,
             city: city,
             code: code,
             number: number,
-            date: date,
-            hour: hour,
-            info: info
+            date: `${startDate}`,
+            hour: `${startDate2}`,
+            information: info
         }
 
 
     const handleClickNext = () => {
+        handleChangeDate();
+        // handleChangeHour();
+
 
         if (typeof handleChange === "function") {
             handleChange(adress)
@@ -71,21 +76,21 @@ function Step4({next, prev}) {
         dane={...dane, ...adress}
         console.log(dane)
     }
-    // const handleChangeDate = (ev) => {
-    //     setDate(ev.target.value)
-    //     adress = {...adress, date: ev.target.value}
-    //     dane={...dane, ...adress}
-    //     console.log(dane)
-    // }
-    // const handleChangeHour = (ev) => {
-    //     setHour(ev.target.value)
-    //     adress = {...adress, hour: ev.target.value}
-    //     dane={...dane, ...adress}
-    //     console.log(dane)
-    // }
+    const handleChangeDate = () => {
+        setDate(`${startDate}`)
+        console.log(`${startDate}`)
+        // adress = {...adress, date: startDate}
+        // dane={...dane, ...adress}
+    }
+    const handleChangeHour = () => {
+        setHour(startDate2)
+        adress = {...adress, hour: startDate2}
+        dane={...dane, ...adress}
+        console.log(dane)
+    }
     const handleChangeInfo = (ev) => {
         setInfo(ev.target.value)
-        adress = {...adress, infor: ev.target.value}
+        adress = {...adress, information: ev.target.value}
         dane={...dane, ...adress}
         console.log(dane)
     }
@@ -126,12 +131,13 @@ function Step4({next, prev}) {
                                     selected={startDate}
                                     onChange={date => setStartDate(date)}
                                     withPortal
+
                                 />
                             </label>
                             <label className={"change_index datapickers"}> <div className={"datapickers_div"}>Godzina:</div>
                                 <DatePicker
-                                    selected={startDate}
-                                    onChange={date => {setStartDate(date)}}
+                                    selected={startDate2}
+                                    onChange={date => {setStartDate2(date)}}
                                     showTimeSelect
                                     showTimeSelectOnly
                                     timeIntervals={30}

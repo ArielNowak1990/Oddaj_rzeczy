@@ -6,7 +6,7 @@ import log4 from "../assets/Icon-4.svg"
 
 function Step5({next, prev}) {
     let {dane} = useContext(StepContext);
-
+    console.log(dane)
 
     const handleClickNext = () => {
         if (typeof next === "function") {
@@ -53,7 +53,7 @@ function Step5({next, prev}) {
                             </label>
                             <label> Godzina: {dane.hour}
                             </label>
-                            <label> Uwagi dla kuriera: {dane.infor}
+                            <label> Uwagi dla kuriera: {dane.information}
                             </label>
                         </div>
                     </div>
