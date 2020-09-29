@@ -4,6 +4,8 @@ import {useState} from 'react'
 import decoration from '../assets/Decoration.svg'
 import headerBackground from '../assets/Home-Hero-Image.jpg'
 import {Link as LinkScroll} from 'react-scroll';
+import times from "../assets/times-solid.svg"
+import bars from "../assets/bars-solid.svg"
 
 function HomeHeader() {
     const [menuClick, setMenuClick] = useState(false)
@@ -19,7 +21,7 @@ function HomeHeader() {
                     <Link to={'/signup'} className={'btn btn-small'}>Zarejestruj</Link>
                 </div>
                 <div className={'menu-icon'} onClick={handleMenuClick}>
-                    {(menuClick) ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
+                    {menuClick? <img src={times} alt="times"/> : <img src={bars} alt="bars"/>}
                 </div>
                 <ul className={menuClick ? 'menu menu__active' : 'menu'}>
                     <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose}>Start</a></li>
@@ -50,7 +52,7 @@ function HomeHeader() {
             </div>
             <div className={'content'}>
                 <div className={'content__text'}>
-                <h2 className={'content__title'}>Zacznij pomagać!</h2>
+                <h2 className={'content__title'}>Zacznij pomagać! </h2>
                 <h2 className={'content__title'}>Oddaj niechciane rzeczy w zaufane ręce</h2>
                 <img className={'decoration'} src={decoration} alt={'decoration'}/>
                 <div className={'content__buttons'}>

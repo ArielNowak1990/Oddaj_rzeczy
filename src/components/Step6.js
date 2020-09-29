@@ -14,7 +14,7 @@ function Step6() {
             <div className={"formularz"}>
                 <img src={bearBackground} alt="bearBackground" className={"bearBackground"}/>
                 <div className={"last_form"}>
-                <h3> Dziękujemy ! </h3>
+                <h3> Dziękujemy !</h3>
                 <h3> że podzieliłeś się z najbardziej potrzebującymi !</h3>
                 <img src={decoration} alt="decor" className={"last_decor"}/>
                 <div>
