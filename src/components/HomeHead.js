@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useState} from 'react'
+import times from "../assets/times-solid.svg";
+import bars from "../assets/bars-solid.svg";
 // import {Link as LinkScroll} from 'react-scroll';
 
 function HomeHead() {
@@ -17,7 +19,7 @@ function HomeHead() {
                     <Link to={'/signup'} className={'btn btn-small'}>Zarejestruj</Link>
                 </div>
                 <div className={'menu-icon'} onClick={handleMenuClick}>
-                    {(menuClick) ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
+                    {menuClick? <img src={times} alt="times"/> : <img src={bars} alt="bars"/>}
                 </div>
                 <ul className={menuClick ? 'menu menu__active' : 'menu'}>
                     <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose} href={'http://localhost:3001'}>Start</a></li>

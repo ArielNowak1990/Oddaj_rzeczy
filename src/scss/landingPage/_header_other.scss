@@ -65,7 +65,7 @@
   .logIn {
     display: none;
     margin: 37px 0 17px;
-    @include desktop {
+    @include desktop (650px){
       display: flex;
     }
   }
@@ -79,7 +79,7 @@
     align-items: center;
     width: 100%;
     background-color: white;
-    @include desktop {
+    @include desktop (650px) {
       position: static;
       display: flex;
       width: unset;
@@ -105,7 +105,7 @@
       padding: 9px 20px;
       color: $color-dark;
       font-size: 1.8rem;
-      @include desktop {
+      @include desktop (650px){
         height: 100%;
         padding: 9px 20px;
         color: $color-dark;
@@ -139,7 +139,6 @@
 
     &__title {
       font-size: 3.0rem;
-
       text-align: center;
     }
 
@@ -156,12 +155,16 @@
   .menu-icon {
     margin: 30px 30px 0 0;
     cursor: pointer;
-    @include desktop {
+    @include desktop (550px){
       display: none;
     }
 
-    .icon {
-      font-size: 3.0rem;
+    img {
+      width: 25px;
+      height: 25px;
+      display: block;
+      color: red;
+      z-index: 5;
     }
   }
 }

@@ -4,6 +4,8 @@ import {useState} from 'react'
 import {Link as LinkScroll} from 'react-scroll';
 import decoration from "../assets/Decoration.svg";
 import background from "../assets/Form-Hero-Image.jpg"
+import times from "../assets/times-solid.svg";
+import bars from "../assets/bars-solid.svg";
 
 function HomeHeads() {
     const [menuClick, setMenuClick] = useState(false)
@@ -20,7 +22,7 @@ function HomeHeads() {
                     <Link to={'/signup'} className={'btn btn-small'}>Zarejestruj</Link>
                 </div>
                 <div className={'menu-icon'} onClick={handleMenuClick}>
-                    {(menuClick) ? <i className="fas fa-times" /> : <i className="fas fa-bars" />}
+                    {menuClick? <img src={times} alt="times"/> : <img src={bars} alt="bars"/>}
                 </div>
                 <ul className={menuClick ? 'menu menu__active' : 'menu'}>
                     <li className={'menu__element'}><a className={'menu__link'} onClick={handleMenuClose} href={'http://localhost:3001'}>Start</a></li>
