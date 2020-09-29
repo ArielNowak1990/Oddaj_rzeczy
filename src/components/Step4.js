@@ -7,10 +7,9 @@ import pl from "date-fns/locale/pl"
 registerLocale("PL", pl);
 
 
-// setDefaultLocale(pl)
-
 function Step4({next, prev}) {
     let {dane, handleChange} = useContext(StepContext);
+
     const today = new Date();
     const [street, setStreet] = useState(dane.street)
     const [city, setCity] = useState(dane.city)
@@ -21,7 +20,8 @@ function Step4({next, prev}) {
     const [info, setInfo] = useState(dane.information)
     const [startDate, setStartDate] = useState(today);
     const [startDate2, setStartDate2] = useState(today.getHours());
-
+    today.toLocaleDateString('pl-PL');
+    today.toLocaleTimeString('pl-PL', {hour12: false});
     let adress = {
             street: street,
             city: city,
@@ -131,6 +131,7 @@ function Step4({next, prev}) {
                                     selected={startDate}
                                     onChange={date => setStartDate(date)}
                                     withPortal
+                                    dateFormat="yyyy-MM-dd"
 
                                 />
                             </label>
@@ -142,7 +143,7 @@ function Step4({next, prev}) {
                                     showTimeSelectOnly
                                     timeIntervals={30}
                                     dateFormat="HH:mm"
-                                    locale="PL"
+
                                />
                             </label>
                             <label className={"textarea change_index datapickers"}> <div className={"datapickers_div"}>Uwagi dla kuriera:</div>
