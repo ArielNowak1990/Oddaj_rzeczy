@@ -107,7 +107,7 @@ if (!locals){return ("....wczytywanie")}
     return (
 
         <section className={'help'} id={'help'}>
-            <div className={'container'}>
+            <div className={'help_container'}>
                 <h2 className={'help__title'}>Komu pomagamy?</h2>
                 <img className={'decoration'} src={decoration} alt={'decoration'}/>
                 <div className={'help__receiversGroups'}>

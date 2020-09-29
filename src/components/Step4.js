@@ -89,12 +89,12 @@ function Step4({next, prev}) {
         // adress = {...adress, date: startDate}
         // dane={...dane, ...adress}
     }
-    const handleChangeHour = () => {
-        setHour(startDate2)
-        adress = {...adress, hour: startDate2}
-        dane={...dane, ...adress}
-        console.log(dane)
-    }
+    // const handleChangeHour = () => {
+    //     setHour(startDate2)
+    //     adress = {...adress, hour: startDate2}
+    //     dane={...dane, ...adress}
+    //     console.log(dane)
+    // }
     const handleChangeInfo = (ev) => {
         setInfo(ev.target.value)
         adress = {...adress, information: ev.target.value}

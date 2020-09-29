@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
 
-  .container {
+  .help_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,12 +13,18 @@
   &__title {
     font-size: 3.5rem;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   &__receiversGroups {
     display: flex;
-    justify-content: space-between;
-    margin: 30px 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 
   }
 
@@ -31,6 +37,8 @@
     text-transform: none;
     border: 1px solid black;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     &:hover{
       background-color: #FAD648;
@@ -54,8 +62,9 @@
     }
   }
   &__list{
-    width: 100%;
-    margin: 20px 0 0;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   &__box {

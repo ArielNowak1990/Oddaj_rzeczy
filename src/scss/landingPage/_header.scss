@@ -1,3 +1,9 @@
+@mixin desktop ($desktop-width: 550px) {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
 .btn{
   background-color: white;
   display: flex;
