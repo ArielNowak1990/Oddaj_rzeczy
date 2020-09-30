@@ -6,8 +6,7 @@ import PageLog from "./components/Log";
 import PageLogOut from "./components/LogOut";
 import PageSign from "./components/Sign";
 import {Steps} from "./components/Steps";
-// import { withAuthentication } from './components/Session'
-//TODO : do zrobienia authentyfikacja
+import { withAuthentication } from './components/session'
 
 function App() {
     return (
@@ -25,5 +24,5 @@ function App() {
     );
 }
 
-// export default withAuthentication(App);
-export default App;
+export default withAuthentication(App);
+
